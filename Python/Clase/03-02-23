@@ -1,0 +1,115 @@
+""" lista1 = ['1','a','b','3','c','d','e','e']
+lista2 = ['a','b','1','2','3']
+lista3 = []
+n = 0
+
+for i in range(len(lista1)):
+    for j in range(len(lista2)):
+        if lista1[i] != lista2[j]:
+            n+=1
+        if n == len(lista2):
+            lista3.append(lista1[i])
+    n = 0
+print(lista3)
+
+print("-----------------")
+a = set(lista1) 
+b = set(lista2)
+c = a - b # Diyución - Diferencia 
+print(c) """
+
+""" import statistics
+ciudades = []
+bogota = [19,19,17,18,20]
+bucaramanga = [27,26,26,26,27]
+medellin = [27,26,26,27,29]
+ciudades.append(statistics.mean(bogota))
+ciudades.append(statistics.mean(bucaramanga))
+ciudades.append(statistics.mean(medellin))
+print(f'''Promedios:
+Bógota: {ciudades[0]}, Máximo: {max(bogota)} y Minimo: {min(bogota)}
+Bucaramanga: {ciudades[1]}, Máximo: {max(bucaramanga)} y Minimo: {min(bucaramanga)}
+Medellin: {ciudades[2]}, Máximo: {max(medellin)} y Minimo: {min(medellin)}''') """
+
+""" curso = [],[],[],[],[]
+suma = 0
+n = int(input("Digitar la cantidad de alumnos a registrar: "))
+for i in range(n):
+    curso[0].append(input(f"Digitar el nombre del alumno #{i+1}: "))
+    curso[1].append(input(f"Digitar el curso de {curso[0][i]}: "))
+    curso[2].append(input(f"Digitar el género de {curso[0][i]}: "))
+    for j in range(3):
+        suma += float(input(f"Digitar la nota #{j+1} del estudiante {curso[0][i]}: "))
+    curso[3].append(suma/3)
+    if(curso[3][i] >= 3.5):
+        curso[4].append("Aprobó")
+    else:
+        curso[4].append("Reprobó")
+    suma = 0
+print(curso) """
+
+""" import random
+clientes = ["Alex","Bob","Carol","Dave","Flow","Katie","Nate"]
+diccionario_descuentos = {cliente:random.randint(1,100) for cliente in clientes}
+print(diccionario_descuentos) """
+
+""" dias =["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+temp = [30.5,32.6,31.8,33.4,29.8,30.2,29.9]
+temp_semanal = {dias:temp for (dias,temp) in zip(dias,temp)}
+print(temp_semanal)
+print(temp_semanal["Thursday"]) """
+
+""" alumnos = []
+alumno = {}
+for i in range(2):
+    alumno["Nombre"] = input("Nombre")
+    alumno["Curso"] = input("Curso")
+    alumnos.append(alumno)
+    alumno={}
+print(alumnos) """
+
+""" alumnos = []
+promedio,calificacion = 0,''
+n = int(input("Digitar la cantidad de alumnos a registrar: "))
+for i in range(n):
+    alumnos.append([])
+    name = input(f"Digitar el nombre del alumno #{i+1}: ") #alumno["nombre"] = input("nombre")
+    course = int(input(f"Digitar el curso de {name}: "))
+    while course > 11 or course <= 0:
+        print("Error: Curso fuera del rango.")
+        course = int(input(f"Digitar el curso de {name}: "))
+    gender = input(f"Digitar el género de {name} (m: Masculino - F: Femenino): ").lower()
+    while gender != "m" and gender != "f":
+        print("Error: Debe escribir m o f")
+        gender = input(f"Digitar el género de {name} (m: Masculino - F: Femenino): ").lower()
+    for j in range(3):
+        indNote = float(input(f"Digitar la nota #{j+1} de {name}: "))   
+        while indNote < 0 or indNote > 5:
+            print("Error: Nota fuera del rango, debe estar entre 0 a 5")
+            indNote = float(input(f"Digitar la nota #{j+1} de {name}: "))  
+        promedio += indNote #Suma de las 3 notas
+    promedio = promedio/3 
+    if promedio >= 3.5:
+        calificacion = "Aprobo"
+    else:
+        calificacion = "Reprobo"
+    alumnos[i].append({"nombre" : name, "curso" : course, "genero" : gender, "notaFinal" : promedio, "calificacion" : calificacion})
+    promedio = 0
+print(alumnos) """
+
+empleados = []
+empleado = {}
+horas = 0
+n = int(input("Digitar la cantidad de empleados: "))
+for i in range(n):
+    empleados.append([])
+    empleado["Nombre"] = input(f"Digitar el nombre del empleado #{i+1}: ")
+    empleado["Antiguedad"] = int(input(f'Digitar la antiguedad de {empleado["Nombre"]} (en años): '))
+    horas = int(input(f'Digitar la cantidad de horas trabajadas al mes de {empleado["Nombre"]}: '))
+    empleado["ValorHora"] = float(input(f'Digitar el valor hora de {empleado["Nombre"]}: '))
+    empleado["TotalBruto"] = empleado["ValorHora"] * horas
+    empleado["TotalDescuento"] = (empleado["ValorHora"] * horas)*13/100
+    empleado["ValorNeto"] = (empleado["ValorHora"] * horas) - ((empleado["ValorHora"] * horas)*13/100)
+    empleados[i].append(empleado)
+    empleado = {}
+print(empleados)
