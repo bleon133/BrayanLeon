@@ -31,7 +31,49 @@
         }else{
             document.write('Error: Son iguales')
         } */
-        
+        /* var num
+        var acum = 0
+        var i = 0
+        mayor=0
+        menor=0
+        while(num != 0){
+            num = parseInt(prompt('Digita número entero: '))
+            acum += num
+            i++
+            if(i == 1){
+                mayor = num
+                menor = num
+            }
+            else{
+                if(num !=0){
+                    if(num > mayor){
+                        mayor = num
+                    }
+                    else if(num < menor){
+                        menor = num
+                    }
+                }
+            }
+        }
+        document.write(`Promedio: ${acum/(i-1)}`)
+        document.write("<br>")
+        document.write(`Mayor: ${mayor}`)
+        document.write("<br>")
+        document.write(`Menor: ${menor}`) */
+        /* for(i=1; i <= 100; i++){
+            if((i % 2) == 0 && (i % 3) == 0){
+                document.write(i, "<br>")
+            }
+        } */
+        /* var i=1
+        var clave = ''
+        clave = prompt('Digita clave: ')    
+        while (i!=3 && clave != "123456"){
+            clave = prompt(`Fallos: ${i}. Intentos Restantes: ${3-i}
+Digita clave: `)
+            i++     
+        }
+        (clave == '123456')?document.write('Bienvenido'):document.write('No tiene más intentos') */
     </script>
 </body>
 </html>
