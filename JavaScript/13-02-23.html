@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*         var option = -1
+        var num1 = +prompt('Digitar número 1: ')
+        var num2 = +prompt('Digitar número 2: ')
+        while(option != 5){
+            option = prompt(`1. Sumar (+)
+2. Restar (-)
+3. Multiplicar (*)
+4. Dividir (/)
+5. Salir
+Escribir la opción a operar: `)
+            switch(option){
+                case '1':
+                    alert((num1+num2).toFixed(2))
+                    break
+                case '2':
+                    alert((num1-num2).toFixed(2))
+                    break
+                case '3':
+                    alert((num1*num2).toFixed(2))
+                    break
+                case '4':
+                    (num2==0)?alert('No se puede dividir en 0'):alert((num1/num2).toFixed(2))
+                    break
+                case '5':
+                    break
+                default:
+                    alert('Error: Opción Incorrecta.')
+                    break
+            }
+        } */
+/*         var duration = parseInt(prompt('Digitar la duración de la llamada por minutos: '))
+        option = prompt(`1. Local 
+2. Regional
+3. Larga Distancia Nacional
+4. Larga Distancia Internacional
+5. Celular
+Escribir el tipo de llamada: `)
+        switch(option){
+            case '1':
+                alert(50*duration)
+                break
+            case '2':
+                (duration>=5)?alert((100*duration)-((100*duration)*5/100)):alert(100*duration)
+                break
+            case'3':
+                (duration>=5)?alert((500*duration)-((500*duration)*5/100)):alert(500*duration)
+                break
+            case'4':
+                alert(700*duration)
+                break
+            case '5':
+                alert(200*duration)
+                break
+        } */
+
+        parcial1 = +prompt('Digitar parcial 1: ')
+        parcial2 = +prompt('Digitar parcial 2: ')
+        if((parcial1+parcial2)/2 < 2.0){
+            document.write(`Reprobo por bajo promedio. Nota Final: ${(parcial1+parcial2)/2}`)
+        }else{
+            examFinal = +prompt('Digitar examen final: ')
+            if(examFianl < 2.0){
+                document.write(`Reprobo por bajo promedio. Nota Final: ${examFianl}`)
+            }else{
+                if(((parcial1*30/100)+(parcial2*30/100)+(examFinal*40/100))< 3.0){
+                    habilitacion = +prompt('Debe habilitar. Digitar Habilitación: ')
+                    
+                }else{
+                    document.write(`Aprobo. Nota Final: ${(parcial1*30/100)+(parcial2*30/100)+(examFinal*40/100)}`)
+                }
+            }
+        }
+    </script>
+</body>
+</html>

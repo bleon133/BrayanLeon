@@ -1,16 +1,16 @@
 //1.Desarrolle un algoritmo que permita leer 3 números enteros. El algoritmo debe imprimir cual es el numero mayor y cual es el numero menor entre los 3. Ademas ninguno de los 3 numeros ingresados pueden ser iguales. En caso de que el usuario ingrese 2 numeros iguales debe mostrar una alerta.
-/* num1 = parseInt(prompt('Digitar el valor 1: '))
+num1 = parseInt(prompt('Digitar el valor 1: '))
 num2 = parseInt(prompt('Digitar el valor 2: '))
 num3 = parseInt(prompt('Digitar el valor 3: '))
 if(num1 > num2 && num1 > num3){
-    console.log(`El valor mayor es: ${num1}`)
+    alert(`El valor mayor es: ${num1}`)
 }
 else if(num2 > num1 && num2 > num3){
-    console.log(`El valor mayor es: ${num2}`)
+    alert(`El valor mayor es: ${num2}`)
 }
 else{
-    console.log(`El valor mayor es: ${num3}`)
-} */
+    alert(`El valor mayor es: ${num3}`)
+}
 
 //2.Desarrolle un algoritmo que reciba la base y altura de un triangulo en cm. Los 2 valores ingresados no pueden ser iguales, ademas el algoritmo debe calcular el area del triangulo si la base es mayor a 5cm y la altura es mayor a 4cm, si no lo son el algoritmo debe imprimir el valor de la base multiplicado por 2 y sumarle 10.
 /* base = parseInt(prompt('Digitar la base (cm): '))
