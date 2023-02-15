@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15-02-23</title>
+</head>
+<body>
+    <script>
+        var conciente = 0
+        var residuo = +prompt('Digitar el dividendo: ')
+        var divisor = +prompt('Digitar el divisor: ')
+        if(divisor !=0){
+            while(residuo >= divisor){
+            residuo -= divisor
+            conciente++
+            }
+        }
+        (divisor !=0)?document.write(`Residuo: ${residuo}. Conciente: ${conciente}`):document.write('No se puede')
+    </script>
+</body>
+</html>
