@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16-02-23</title>
+</head>
+<body>
+    <!-- NÚMEROS<input type="number" id ="numero"><br>
+    <button id = "unshift"> Agregar Inicio </button>
+    <button id = "push"> Agregar Final </button>
+    <button id = "shift"> Quitar Inicio </button>
+    <button id = "pop"> Quitar Final </button>
+    <button id = "mostrar"> Mostrar </button>
+    <div id = "pantalla"> </div>
+    <script>
+        const numero = document.getElementById("numero")
+        const agregarInicio = document.getElementById("unshift")
+        const agregarFinal = document.getElementById("push")
+        const quitarInicio = document.getElementById("shift")
+        const quitarFinal = document.getElementById("pop")
+        const mostrar = document.getElementById("mostrar")
+        const pantalla = document.getElementById("pantalla")
+        const numeros = []
+        
+        mostrar.addEventListener('click',pintar)
+        
+        function pintar(){
+            pantalla.innerHTML=numeros
+        }
+
+        agregarFinal.addEventListener('click',()=>{
+            numeros.push(numero.value)
+            numero.value = ''
+            pintar()
+        })
+
+        agregarInicio.addEventListener('click',()=>{
+            numeros.unshift(numero.value)
+            numero.value = ''
+            pintar()
+        })
+
+        quitarFinal.addEventListener('click', ()=>{
+            numeros.pop()
+            numero.value = ''
+            pintar()
+        })
+
+        quitarInicio.addEventListener('click', ()=>{
+            numeros.shift()
+            numero.value = ''
+            pintar()
+        })
+    </script> -->
+    <!-- <div id = "pantalla"> </div><br>
+    <button id = "push"> Agregar </button>
+    <button id = "delete"> Eliminar </button>
+    <script>
+        const agregar = document.getElementById("push")
+        const pantalla = document.getElementById("pantalla")
+        const eliminar = document.getElementById("delete")
+        const numeros = []
+
+        agregar.addEventListener('click',()=>{
+            for(i=10; i<=20; i++){
+                numeros.push(i)
+            }
+            pantalla.innerHTML=numeros
+        })
+
+        eliminar.addEventListener('click',()=>{
+            numeros.length = 0  
+            pantalla.innerHTML=numeros
+        })
+    </script> -->
+    <!-- <script>
+        var numeros = []
+        for(i=0;i<10;i++){
+            document.write(Math.floor(Math.random()*(11-1)+1) + "\n")
+        }
+    </script> -->
+    <script>
+        const numeros = [33,55,77,81,48]
+        var numeroTotal = 0
+        for(i=0;i<numeros.length;i++){
+            document.write(numeros[i] + "<br>")
+            numeroTotal += numeros[i]
+        }
+        document.write(numeroTotal)
+    </script>
+</body>
+</html>
