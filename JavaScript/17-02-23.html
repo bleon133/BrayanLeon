@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    Usuario: <br>
+    <input type = "text" id = "user"> <br>
+    Contraseña: <br>
+    <input type = "password" id = "password"> <br>
+    <button id = "sing"> Sing in </button> <br>
+    <div id = "error" ></div>
+    <script>
+        const user = document.getElementById("user")
+        const password = document.getElementById("password")
+        const singIn = document.getElementById("sing")
+        const error = document.getElementById("error")
+
+        const users = ['Austin', 'Tasha', 'Uniqua']
+        const passwords = ['123456', 'contraseña', 'qwerty']
+        var flag = false
+        var intentos = 0
+
+        singIn.addEventListener('click',()=>{
+            if(intentos < 2){
+                for(i=0;i<users.length;i++){
+                    console.log(user.value.toLowerCase())
+                    console.log(users[i].toLowerCase())
+                    if(user.value.toLowerCase() == users[i].toLowerCase()){
+                        if(password.value == passwords[i]){
+                            flag = true
+                            intentos = 3
+                            break
+                        }else{
+                            flag = false
+                        }
+                    }else{
+                        flag = false
+                    }
+                    user.value = ''
+                    password.value = ''
+                }
+                intentos +=1
+                if(flag == true){
+                    error.innerHTML='Bienvenido'
+                }else{
+                    error.innerHTML=`Intento ${intentos}. Te quedan ${3-intentos} intentos.`
+                }
+            }else{
+                if(flag == true){
+                    error.innerHTML='Bienvenido'
+                }else{
+                    error.innerHTML=`No le quedan intentos. Intente más tarde.`
+                    user.value = ''
+                    password.value = ''
+                }
+            }
+        })
+    </script>
+</body>
+</html>
